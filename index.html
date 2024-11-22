@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureStep</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    
+</head>
+<body id="body">
+    <header>
+        <a href="logo"><img src="logo.jpg" alt=""></a>
+    <div class="nav">
+       <a href="#">HOME</a>
+       <a href="#">ABOUT</a>
+       <a href="#">FEATURES</a>
+       <a href="contact">CONTACTUS</a>
+    </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h4 class="multiword">Developing for enthusiats. </h4>
+            <h2>let's embark on this journey</h2>
+            <h4></h4>
+            <img id="i1"src="image2.jpg" alt="">
+            <button>Start</button>
+        
+        </div>
+        
+        <div class="card1">
+            <div class="content">
+            <h3>Gamified training <span>meets</span>  security awareness</h3>
+            <div class="text">
+                Experience the perfect blend of gamified training and security awareness .Engage in interactive challenges ,sharpen yourskills,and level up your knowledge to protect your data using secured password techniques.
+            </div>
+            </div>
+            <div class="c1">
+            <img src="image3.png" alt="">
+            <button>Get Demo</button>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="content">
+            <h3>Lets go to <span>next</span> adventure</h3>
+            <div class="text">
+                Ready for the next adventure? Let's embark on a new journey,explore uncharted territories , and facing exciting challenges together.
+                The adventure awaits-let's dive in and make it unforgettable..!!
+            </div>
+            </div>
+            <div class="c2">
+            <img src="imag1.jpg" alt="">
+            <button>Get Demo</button>
+            </div>
+        </div>   
+           
+            
+    
+        <div class="card3">
+            <div class="content">
+            <h3>Empowering with simple training levels</h3>
+            <div class="text">
+            <p>Empower your cybersecurity journey , with simple step by step training:
+                from basic online safety to advanced threat detection.Learn , Grow and Secure your digital presence with accessible guidance.
+            </p>
+            </div>
+            </div>
+             <div class="c3">
+            <img src="image4.png" alt="girl">
+        
+            <button>Get Demo</button>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="form">
+            <form name="contact us" action="POST" onsubmit="return validateFeedback()">
+                <p>Let us know your Thoughts!!</p>
+                <div class="form_reveal">
+                    <div class="userInput">
+                        <input type="text" id="name" placeholder="Your Name" required autocomplete="on">
+                        
+                    </div>
+                    <div class="emailClass">
+                        <input type="text" id="email" autocomplete="on"placeholder="Your Email ID" required>
+                    </div>
+                    <div class="feedback inputClass">
+                        <textarea name="Feedback" id="feedback" class="feedback" placeholder="minimum(10 characters)"cols="30"rows="3" oninput="clickFeedbackLength(this)"></textarea>
+
+                    </div>
+                    <span id="feedbackError"style="color:#ff5457;white-space:normal;opacity:0%;transition:opacity 0.4s ease;"display="none">Feedback must be 10 characters long</span>
+
+                    <button type="submit" id="send">Send</button>
+                </div>
+
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 SecureStep .All Rights Reserved. </p>
+                
+
+            </div>
+          
+           <div class="last">
+             <p>Designed and developed with <i class='bx bxs-heart'></i> by Core team members<br/></p></boxicon>
+           </div>
+        </footer>
+
+    </div>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

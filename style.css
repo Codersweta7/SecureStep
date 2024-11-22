@@ -1,0 +1,199 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+     background-color: black; 
+     color:aliceblue;
+     
+}
+header{
+    left:0;
+    right:0;
+    text-decoration: none;
+    font-size:20px;
+    color:aliceblue;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.nav a{
+    top:0;
+    text-decoration: none;
+    color:aliceblue;
+    padding:30px;
+    
+
+}
+.nav a:hover{
+    border-top:2px solid antiquewhite;
+}
+
+
+.container{
+    margin:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    flex-direction: column;
+    margin-bottom:3px;
+}
+.card{
+    height:200px;
+    width:700px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin:100px 80px 250px 80px;
+    box-sizing: border-box;
+
+
+
+}
+.card img{
+    height:300px;
+    width:500px;
+}
+.card1{
+    height:200px;
+    width:700px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 4px solid #ccc;
+
+    
+
+}
+.card1 button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.c1{
+    display:flex;
+    flex-direction: column;
+    }
+    
+.card2{
+    height:200px;
+    width:700px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 4px solid #ccc;}
+
+.c2{
+     display:flex;
+        flex-direction: column;
+ }
+        
+
+.card3{
+    height:200px;
+    width:700px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 4px solid #ccc;
+
+}
+.c3{
+display:flex;
+flex-direction: column;
+}
+
+.btn{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height:150px;
+    width:200px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:100px;
+    
+}
+form p{
+    text-align: center;
+    font-size: 25px;
+}
+form button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding:3px;
+    font-size: 15px;
+    margin-left:58px;
+}
+.form_reveal input{
+    margin:10px;
+    padding:5px;
+
+}
+.form_reveal textarea{
+    margin:5px;
+}
+button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footer{
+    margin-top:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+i{
+    color:red;
+    width:15px;
+    height:100px;
+    position:relative;
+    animation:pulse 1.5s infinite alternate;
+    margin:50px auto;
+}
+i::before , i::after{
+
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.2);
+    }
+}
