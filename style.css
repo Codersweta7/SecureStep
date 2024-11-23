@@ -78,6 +78,7 @@ a img{
 
 
 }
+
 .card img{
     height:300px;
     width:500px;
@@ -119,6 +120,12 @@ a img{
     display:flex;
     flex-direction: column;
  }
+ .c2 img{
+    height:150px;
+    width:300px;
+    margin:4px;
+    box-sizing: border-box;
+ }
         
 
 .card3{
@@ -143,7 +150,7 @@ flex-direction: column;
     justify-content: center;
 }
 img{
-    height:250px;
+    height:150px;
     width:400px;
 }
 form{
@@ -191,7 +198,8 @@ button{
     flex-direction: column;
     align-items: center;
 }
-i{
+
+i#heart{
     color:red;
     width:15px;
     height:100px;
@@ -286,6 +294,25 @@ body.dark-theme{
         justify-content:right;
         align-items: center;
         gap:20px;
+    }
+
+    .card{
+        height:500px;
+        width:400px;
+    }
+    .card1,.card2,.card3{
+        height:500px;
+        width:400px;
+        margin:20px;
+    }
+    img{
+        height:100px;
+        width:200px;
+    }
+    .c2 img{
+        height:100px;
+        width:200px;
+        
     }
     
 }
