@@ -12,13 +12,24 @@
 <body id="body">
     <header>
         <a href="logo"><img src="logo.jpg" alt=""></a>
-    <div class="nav">
+      
+    <nav class="navbar">
        <a href="#">HOME</a>
        <a href="#">ABOUT</a>
        <a href="#">FEATURES</a>
-       <a href="contact">CONTACTUS</a>
+       <a href="#">CONTACTUS</a>
+     
+    </nav>
+   
+    <div class="cont">
+        <button class="hamburger" id="hamburger-btn">&#9776;</button>
+        <button id="theme-toggle">Mode</button>
     </div>
     </header>
+   
+     <!-- code for hamburger icon -->
+    
+     
     <div class="container">
         <div class="card">
             <h4 class="multiword">Developing for enthusiats. </h4>
@@ -112,6 +123,18 @@
     
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <script src="script.js"></script>
+ 
+    <script>
+        document.forms["contactus"]["Feedback"].addEventListener('blur',event =>{
+            document.getElementById('feedbackError').style.opacity='0%';
+        })
+
+        document.forms["contactus"]["Feedback"].addEventListener('focus',event =>{
+            checkFeedbackLength(document.forms["contactus"]["Feedback"]);
+        })
+
+    
+    </script>
+   <script src="script.js"></script>
 </body>
 </html>
