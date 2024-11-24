@@ -6,18 +6,21 @@
     <title>SecureStep</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
 </head>
 <body id="body">
     <header>
-        <a href="logo"><img src="logo.jpg" alt=""></a>
+        <div class="logo-container">
+            <a href="logo"><img src="images/logo.jpg" alt=""></a>
+            <span class="title">SecureStep</span>
+        </div>
       
     <nav class="navbar">
        <a href="#">HOME</a>
-       <a href="#">ABOUT</a>
+       <a href="about.html">ABOUT</a>
        <a href="#">FEATURES</a>
-       <a href="#">CONTACTUS</a>
+       <a href="#">CONTACT US</a>
      
     </nav>
    
@@ -28,98 +31,85 @@
     </header>
    
      <!-- code for hamburger icon -->
+      
+     <div class="first-card">
+        <h4 class="multiword">Developing for enthusiasts.</h4>
+        <h2>Let's embark on this journey</h2>
+        <div class="card-content">
+            <img id="i1" src="images/image2.jpg" alt="Image Description">
+            <div class="text-and-button">
+                <p class="card-text">Your journey into the world of development starts here. Let's explore and grow together.</p>
+                <button>Start</button>
+            </div>
+        </div>
+    </div>
+        
+        
+        <div class = "container">
     
-     
-    <div class="container">
-        <div class="card">
-            <h4 class="multiword">Developing for enthusiats. </h4>
-            <h2>let's embark on this journey</h2>
-            <h4></h4>
-            <img id="i1"src="image2.jpg" alt="">
-            <button>Start</button>
-        
-        </div>
-        
         <div class="card1">
-            <div class="content">
-            <h3>Gamified training <span>meets</span>  security awareness</h3>
-            <div class="text">
-                Experience the perfect blend of gamified training and security awareness .Engage in interactive challenges ,sharpen yourskills,and level up your knowledge to protect your data using secured password techniques.
-            </div>
-            </div>
-            <div class="c1">
-                <div class="i1">
-            <img src="image3.png" alt="">
+            <div class="card-content">
+                <img src="images/image3.png" alt="">
+                <div class="text-and-button">
+                    <h3>Gamified training <span>meets</span> security awareness</h3>
+                    <p class="card-text">Experience the perfect blend of gamified training and security awareness. Engage in interactive challenges, sharpen your skills, and level up your knowledge to protect your data using secured password techniques.</p>
+                    <button>Get Demo</button>
                 </div>
-            <button>Get Demo</button>
             </div>
         </div>
+    
         <div class="card2">
-            <div class="content">
-            <h3>Lets go to <span>next</span> adventure</h3>
-            <div class="text">
-                Ready for the next adventure? Let's embark on a new journey,explore uncharted territories , and facing exciting challenges together.
-                The adventure awaits-let's dive in and make it unforgettable..!!
+            <div class="card-content">
+                <img src="images/imag1.jpg" alt="">
+                <div class="text-and-button">
+                    <h3>Let's go to <span>next</span> adventure</h3>
+                    <p class="card-text">Ready for the next adventure? Let's embark on a new journey, explore uncharted territories, and face exciting challenges together. The adventure awaits — let's dive in and make it unforgettable!</p>
+                    <button><a href="test.html">Get Demo</a></button>
+                </div>
             </div>
-            </div>
-            <div class="c2">
-            <div class="i1">
-            <img src="imag1.jpg" alt="">
-            </div>
-            <button><a href="test.html">
-                Get Demo</a></button>
-            </div>
-        </div>   
-           
-            
+        </div>
     
         <div class="card3">
-            <div class="content">
-            <h3>Empowering with simple training levels</h3>
-            <div class="text">
-            <p>Empower your cybersecurity journey , with simple step by step training:
-                from basic online safety to advanced threat detection.Learn , Grow and Secure your digital presence with accessible guidance.
-            </p>
-            </div>
-            </div>
-            <div class="c3">
-            <div class="i1">
-            <img src="image4.png" alt="girl">
-            </div>
-        
-            <button><a href="test.html">Get Demo</a></button>
-            </div>
-        </div>
-        </div>
-        </div>
-        <div class="form">
-            <form name="contact us" action="POST" onsubmit="return validateFeedback()">
-                <p>Let us know your Thoughts!!</p>
-                <div class="form_reveal">
-                    <div class="userInput">
-                        <i class='bx bxs-user' ></i>
-                        <input type="text" id="name" placeholder="Your Name" required autocomplete="on">
-                        
-                    </div>
-                    <div class="emailClass">
-                        <i class='bx bxs-envelope'></i>
-                        <input type="text" id="email" autocomplete="on"placeholder="Your Email ID" required>
-                    </div>
-                    <div class="feedback inputClass">
-                        <i class='bx bxs-comment' ></i>
-                        <textarea name="Feedback" id="feedback" class="feedback" placeholder="minimum(10 characters)"cols="30"rows="3" oninput="clickFeedbackLength(this)"></textarea>
-
-                    </div>
-                    <span id="feedbackError"style="color:#ff5457;white-space:normal;opacity:0%;transition:opacity 0.4s ease;"display="none">Feedback must be 10 characters long</span>
-
-                    <button type="submit" id="send">Send</button>
+            <div class="card-content">
+                <img src="images/image4.png" alt="girl">
+                <div class="text-and-button">
+                    <h3>Empowering with simple training levels</h3>
+                    <p class="card-text">Empower your cybersecurity journey with simple step-by-step training: from basic online safety to advanced threat detection. Learn, grow, and secure your digital presence with accessible guidance.</p>
+                    <button><a href="test.html">Get Demo</a></button>
                 </div>
-
-            </form>
+            </div>
         </div>
+    </div> 
+    
+    <div class="form">
+        <h2>Feedback Form</h2> <!-- Added the heading -->
+        <form name="contact us" action="POST" onsubmit="return validateFeedback()">
+            <p>Let us know your Thoughts!!</p>
+            <div class="form_reveal">
+                <div class="userInput">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" id="name" placeholder="Your Name" required autocomplete="on">
+                </div>
+                <div class="emailClass">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="text" id="email" autocomplete="on" placeholder="Your Email ID" required>
+                </div>
+                <div class="feedback inputClass">
+                    <i class='bx bxs-comment'></i>
+                    <textarea name="Feedback" id="feedback" class="feedback" placeholder="minimum(10 characters)" cols="30" rows="3" oninput="clickFeedbackLength(this)"></textarea>
+                </div>
+                <span id="feedbackError" style="color:#ff5457;white-space:normal;opacity:0%;transition:opacity 0.4s ease;" display="none">Feedback must be 10 characters long</span>
+                <button type="submit" id="send">Send</button>
+            </div>
+        </form>
+    </div>   
+    
+        <!-- Back to Top Button -->
+        <button id="backToTopBtn" onclick="scrollToTop()">Back to Top</button>
+
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2024 SecureStep .All Rights Reserved. </p>
+                <p>&copy; 2024 SecureStep. All Rights Reserved. </p>
                 
 
             </div>

@@ -14,21 +14,38 @@ hamburgerBtn.addEventListener('click',()=>{
 });
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body= document.body;
-// check for save theme in local storage
+
 const savedTheme = localStorage.getItem('theme');
 if(savedTheme){
     body.classList.add(savedTheme);
-    themeToggleBtn.textContent = savedTheme === 'darkTheme' ? 'Dark' :'Light';
+    themeToggleBtn.textContent = savedTheme === 'darkTheme' ? 'Dark Mode' :'Light Mode';
 }
 else{
     body.classList.add('dark-theme');
-    themeToggleBtn.textContent = 'light mode'
+    themeToggleBtn.textContent = 'Light Mode'
 }
-themeToggleBtn.addEventListener('click',()=>{
-    body.classList.toggle('dark-theme');
-    const isDakTheme=body.classList.contains('dark-theme');
-    themeToggleBtn.textContent = isDarkTheme ? 'DARK':'Light'
-})
-//save the theme preference in local storage
-localStorage.setItem('theme', isDarkTheme ? 'dark-theme' : 'light-theme');
 
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    const isDarkTheme = body.classList.contains('dark-theme');
+    themeToggleBtn.textContent = isDarkTheme ? 'Light Mode' : 'Dark Mode';
+
+    localStorage.setItem('theme', isDarkTheme ? 'dark-theme' : 'light-theme');
+});
+
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}

@@ -29,118 +29,194 @@ a img{
     height:150px;
     border-radius:50%;
 }
-.navbar a{
-    top:0;
-    text-decoration: none;
-    color:aliceblue;
-    padding:20px;
-   
 
+/* Style the logo and title container */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
-.navbar button{
-    margin-top:2px;
-    margin-left: 600px;
+
+/* Style the title beside the logo */
+.logo-container .title {
+    font-size: 45px; /* Adjust size as needed */
+    font-weight: bold;
+    color: aliceblue;
+    margin-left: 10px; /* Adds spacing between logo and title */
+}
+
+/* Adjust the navbar positioning */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Push links to the right */
+    margin-right: 20px; /* Add space from the right edge */
+}
+
+/* Navbar link styles */
+.navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 20px;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    border: 1px solid antiquewhite;
+}
+
+/* Optional: Add spacing for navbar buttons */
+.navbar button {
+    margin-top: 2px;
+    margin-left: 600px; /* Adjust if needed */
     border-radius: 5px;
 }
-.navbar a:hover{
-    border:1px solid antiquewhite;
+
+.first-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all content */
+    margin: 20px auto; /* Center the card on the page */
+    max-width: 600px; /* Optional: Limit width for readability */
 }
 
+.first-card h4,
+.first-card h2 {
+    text-align: center; /* Ensure text is centered */
+    margin: 10px 0; /* Add spacing between elements */
+}
 
-.container{
-    margin:200px;
-    display:flex;
+.first-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 20px 0; /* Add spacing around the image */
+    border-radius: 10px; /* Optional: Add a slight rounded effect */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text and button */
+    text-align: center; /* Center align the paragraph */
+}
+
+.text-and-button p {
+    margin-bottom: 10px; /* Spacing below the text */
+}
+
+.text-and-button button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-and-button button:hover {
+    background-color: rgb(90, 15, 28); /* Darken on hover */
+}
+
+/* Container for cards */
+.container {
+    margin: 200px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px; /* Adds space between each card */
 }
-.container button{
-    display:flex;
+
+/* Content within each card */
+.content {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 3px;
 }
-.content{
-    flex-direction: column;
-    margin-bottom:3px;
-}
-.card{
-    height:200px;
-    width:700px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+/* Card styles */
+.card, .card1, .card2, .card3 {
+    height: 400px; /* Increased height */
+    width: 750px; /* Increased width */
+    display: flex;
     align-items: center;
     padding: 20px;
-    margin:100px 80px 250px 80px;
+    margin: 50px 20px; /* Adjusted margins to ensure space around the cards */
     box-sizing: border-box;
-
-
-
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
+    background-color: rgb(44, 42, 42); /* Ensures the background is white */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    text-align: left; /* Aligns text to the left */
 }
 
-.card img{
-    height:300px;
-    width:500px;
+/* Card hover effect (optional) */
+.card:hover, .card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
 }
-.card1{
-    height:200px;
-    width:700px;
-    display:flex;
+
+/* Card content layout */
+.card-content {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 4px solid #ccc;
-
-    
-
+    gap: 20px;
+    height: 100%; /* Makes sure everything aligns properly within the card */
 }
-.card1 button{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
+/* Image styles inside cards */
+.card img, .card1 img, .card2 img, .card3 img {
+    height: 200px; /* Adjusted image size */
+    width: 300px;  /* Adjusted image size */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border-radius: 10px; /* Optional: Rounded image corners */
 }
-.c1{
-    display:flex;
+
+/* Text and button layout */
+.text-and-button {
+    display: flex;
     flex-direction: column;
-    }
-    
-.card2{
-    height:200px;
-    width:700px;
-    display:flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 4px solid #ccc;}
-
-.c2{
-    display:flex;
-    flex-direction: column;
- }
- .c2 img{
-    height:150px;
-    width:300px;
-    margin:4px;
-    box-sizing: border-box;
- }
-        
-
-.card3{
-    height:200px;
-    width:700px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 4px solid #ccc;
-
+    height: 100%; /* Ensures text and button are vertically aligned */
 }
-.c3{
-display:flex;
-flex-direction: column;
+
+/* Card text styling */
+.card-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Button styles */
+.card1 button, .card2 button, .card3 button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.card1 button:hover, .card2 button:hover, .card3 button:hover {
+    background-color: #45a049;
+}
+
+/* Specific layout adjustments for cards */
+.card1, .card2, .card3 {
+    border: 4px solid #ccc; /* Adds borders to card1, card2, card3 */
+}
+
+/* Optional: Add padding to container for spacing */
+.container {
+    padding: 30px;
+}
+
+/* Button inside the first card */
+.card button {
+    margin-top: 20px; /* Space between the text and button */
+    align-self: center; /* Centers the button inside the card */
 }
 
 .btn{
@@ -153,43 +229,60 @@ img{
     height:150px;
     width:400px;
 }
-form{
-    display:flex;
+
+.form {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:100px;
-    
+    margin: 100px;
+    border: 2px solid #ccc; /* Border added to the form */
+    padding: 20px; /* Padding to give space inside the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    background-color: rgb(40, 39, 39); /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
 }
-form p{
+
+.form h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Spacing between heading and form */
+}
+
+form p {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
-form button{
-    display:flex;
+
+form button {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    padding:3px;
-    font-size: 15px;
-    margin-left:58px;
-}
-.form_reveal input{
-    margin:10px;
-    padding:5px;
-
-}
-.form_reveal textarea{
-    margin:5px;
-}
-button{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 58px;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer;
 }
 
+.form_reveal input,
+.form_reveal textarea {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px; /* Adjust the width as needed */
+}
+
+.form_reveal textarea {
+    height: 100px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker button on hover */
+}
 
 
 .footer{
@@ -224,35 +317,122 @@ i::before , i::after{
     --text-color:#000000;
     --button-bg:#007bff;
     --button-text:#ffffff;
+    
 }
-button #theme-toggle{
-    height:20px;
-    width:20px;
-    padding:0.5rem 1rem;
-    font-size: 15px;
-    border:none;
+#theme-toggle {
+    padding: 0.5rem 1rem; /* Increased padding for a larger button */
+    font-size: 16px; /* Slightly larger text */
+    font-weight: bold; /* Make text more prominent */
+    border: none;
+    background-color: var(--button-bg); /* Theme-based button background */
+    color: var(--button-text); /* Theme-based text color */
+    border-radius: 30px; /* Rounded corners for a modern look */
+    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
+    cursor: pointer; /* Pointer cursor for better interactivity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none; /* Remove outline on click */
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3; /* Change to a darker shade on hover */
+    transform: scale(1.05); /* Slight scale effect for interactivity */
+}
+
+#theme-toggle:focus {
+    outline: none; /* Remove the default outline when the button is focused */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow effect when focused */
+}
+
+#theme-toggle .icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+/* Default (light mode) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #ff5722;
+    --button-text: #ffffff;
+}
+
+/* Dark mode */
+body.dark-theme {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --button-bg: #ff5722;
+    --button-text: #ffffff;
+}
+
+/* Apply variables to elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header, .logo-container .title, .navbar a {
+    color: var(--text-color);
+}
+
+/* Navbar links hover */
+.navbar a:hover {
+    border: 1px solid var(--text-color);
+}
+
+/* Button styling */
+button {
     background-color: var(--button-bg);
     color: var(--button-text);
-    border-radius: 1px;
-    transition: background-color 0.3s;
+}
 
+/* Default (light mode) styles for container and cards */
+.container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Rounded edges for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light mode shadow */
 }
-#theme-toggle:hover{
-    background-color: #0056b3;
+
+.card1, .card2, .card3 {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
-body.dark-theme{
-    --bg-color:black;
-    --text-color:#ffffff;
-    --button-bg:#ff5722;
-    --button-text:#ffffff;
+
+/* Hover effect for cards */
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-.hamburger{
-    display: none;
-    font-size:2rem;
-    background:none;
-    border:none;
-    color:white;
-    cursor:pointer;
+
+body.dark-theme .container {
+    background-color: #1a1a1a; 
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-theme .card1,
+body.dark-theme .card2,
+body.dark-theme .card3 {
+    background-color: #2c2c2c; 
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-theme .card1:hover,
+body.dark-theme .card2:hover,
+body.dark-theme .card3:hover {
+    transform: scale(1.05);
+    background-color: #3c3c3c; 
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2); 
 }
 
 
@@ -317,6 +497,63 @@ body.dark-theme{
     
 }
 
+button {
+    padding: 0.75rem 1.5rem; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border: none;
+    background-color: var(--button-bg); 
+    color: var(--button-text); 
+    border-radius: 30px; 
+    transition: background-color 0.3s, transform 0.2s ease-in-out; 
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none; 
+}
 
+button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+}
 
-  
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); 
+}
+
+button a {
+    color: inherit; 
+    text-decoration: none; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    padding: 0; 
+
+.content-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backToTopBtn {
+    position: absolute; 
+    background-color: rgb(36, 33, 33);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; 
+    transition: background-color 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    background-color: hsl(0, 0%, 27%); 
+}

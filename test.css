@@ -1,58 +1,141 @@
-*{
-    margin:0px;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color:black;
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
 }
-.main{
-    width:100%;
-    height:100vh;
-    display:flex;
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#box{
-    width:40%;
-    height:440px;
-    padding:15px;
-    box-shadow: 0 0 5px gray;
-  background: aliceblue;
+#box {
+    width: 60%; /* Increased width */
+    height: auto; /* Auto height to adjust based on content */
+    padding: 20px;
+    box-shadow: 0 0 10px gray; /* Increased shadow for better visibility */
+    background: aliceblue;
+    border: 2px solid #ccc; /* Added border */
+    border-radius: 10px; /* Rounded corners */
 }
 
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-.content2{
-    display:flex;
+.content1, .content2, .content3 {
+    margin-bottom: 15px;
+}
+
+.content2 {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding:10px;
-    gap:10px;
+    padding: 10px;
+    gap: 15px; /* Creates space between the elements in content2 */
+    margin-bottom: 30px; /* Creates gap below the Challenge section */
 }
-.content3{
-    width:100%
+
+.content3 {
+    width: 100%;
 }
 
 
-.end{
-    display:flex;
+i:hover #bulb {
+    color: yellow;
+}
+
+
+.row {
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.end {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-}
-i:hover #bulb{
-    color:yellow;
+    gap: 20px;  /* This creates space between the elements inside the end container */
 }
 
-#btn{
-    margin:30px;
-    width:100%;
-    padding:5px;
+.submit {
+    margin-top: 30px;
+    margin-right: 80px;  /* Adds gap above the submit button */
+}
+
+#btn {
+    padding: 10px 20px;
     background-color: black;
-    color:white;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+#btn:hover {
+    background-color: #444; /* Darker button on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* CSS for Score Page */
+#scorePage {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#scorePage h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#scorePage p {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#scorePage button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scorePage button:hover {
+    background-color: #45a049;
 }
