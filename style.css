@@ -1,559 +1,286 @@
-*{
-    margin:0px;
-    padding:0px;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
-body{
-     background-color: black; 
-     color:aliceblue;
-     background-color: var(--bg-color);
-     color:var(--text-color);
-     transition:background-color 0.3s, color 0.3s;
-     
-}
-header{
-    left:0;
-    right:0;
-    text-decoration: none;
-    font-size:20px;
-    color:aliceblue;
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: space-between;
-    padding:20px;
-} 
-a img{   
-    width:100px;
-    height:150px;
-    border-radius:50%;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Style the logo and title container */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+a img {
+    width: 100px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+
+.first-card {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center align text */
+    padding: 20px;
+    margin: 20px auto; /* Center horizontally on the page */
+    max-width: 800px; /* Optional: to constrain the width */
+}
+
+.first-card h4.multiword, 
+.first-card h2 {
+    margin-bottom: 20px;
+}
+
+.first-card .card-content {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+.first-card img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.first-card .text-and-button {
+    max-width: 600px; /* Constrain text width for better readability */
+}
+
+.first-card .text-and-button .card-text {
+    margin-bottom: 20px;
+}
+
+.first-card .text-and-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.first-card .text-and-button button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Logo and title styling */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-/* Style the title beside the logo */
 .logo-container .title {
-    font-size: 45px; /* Adjust size as needed */
+    font-size: 45px;
     font-weight: bold;
     color: aliceblue;
-    margin-left: 10px; /* Adds spacing between logo and title */
+    margin-left: 10px;
 }
 
-/* Adjust the navbar positioning */
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Push links to the right */
-    margin-right: 20px; /* Add space from the right edge */
+    gap: 20px;
 }
 
-/* Navbar link styles */
 .navbar a {
     text-decoration: none;
     color: aliceblue;
-    padding: 20px;
+    padding: 10px;
+    font-size: 18px;
+    transition: border 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for navbar links */
 .navbar a:hover {
-    border: 1px solid antiquewhite;
+    border-bottom: 2px solid aliceblue;
+    color: #ff5722;
 }
 
-/* Optional: Add spacing for navbar buttons */
-.navbar button {
-    margin-top: 2px;
-    margin-left: 600px; /* Adjust if needed */
-    border-radius: 5px;
-}
-
-.first-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align all content */
-    margin: 20px auto; /* Center the card on the page */
-    max-width: 600px; /* Optional: Limit width for readability */
-}
-
-.first-card h4,
-.first-card h2 {
-    text-align: center; /* Ensure text is centered */
-    margin: 10px 0; /* Add spacing between elements */
-}
-
-.first-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin: 20px 0; /* Add spacing around the image */
-    border-radius: 10px; /* Optional: Add a slight rounded effect */
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align the text and button */
-    text-align: center; /* Center align the paragraph */
-}
-
-.text-and-button p {
-    margin-bottom: 10px; /* Spacing below the text */
-}
-
-.text-and-button button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.text-and-button button:hover {
-    background-color: rgb(90, 15, 28); /* Darken on hover */
-}
-
-/* Container for cards */
+/* Cards styling */
 .container {
-    margin: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* Adds space between each card */
-}
-
-/* Content within each card */
-.content {
-    flex-direction: column;
-    margin-bottom: 3px;
-}
-
-/* Card styles */
-.card, .card1, .card2, .card3 {
-    height: 400px; /* Increased height */
-    width: 750px; /* Increased width */
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 50px 20px; /* Adjusted margins to ensure space around the cards */
-    box-sizing: border-box;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visibility */
-    background-color: rgb(44, 42, 42); /* Ensures the background is white */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-    text-align: left; /* Aligns text to the left */
-}
-
-/* Card hover effect (optional) */
-.card:hover, .card1:hover, .card2:hover, .card3:hover {
-    transform: scale(1.05); /* Slightly enlarges the card on hover */
-}
-
-/* Card content layout */
-.card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    height: 100%; /* Makes sure everything aligns properly within the card */
-}
-
-/* Image styles inside cards */
-.card img, .card1 img, .card2 img, .card3 img {
-    height: 200px; /* Adjusted image size */
-    width: 300px;  /* Adjusted image size */
-    object-fit: cover; /* Ensures the image maintains its aspect ratio */
-    border-radius: 10px; /* Optional: Rounded image corners */
-}
-
-/* Text and button layout */
-.text-and-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Ensures text and button are vertically aligned */
-}
-
-/* Card text styling */
-.card-text {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Button styles */
-.card1 button, .card2 button, .card3 button {
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Button hover effect */
-.card1 button:hover, .card2 button:hover, .card3 button:hover {
-    background-color: #45a049;
-}
-
-/* Specific layout adjustments for cards */
-.card1, .card2, .card3 {
-    border: 4px solid #ccc; /* Adds borders to card1, card2, card3 */
-}
-
-/* Optional: Add padding to container for spacing */
-.container {
+    gap: 30px;
     padding: 30px;
 }
 
-/* Button inside the first card */
-.card button {
-    margin-top: 20px; /* Space between the text and button */
-    align-self: center; /* Centers the button inside the card */
-}
-
-.btn{
-    display:flex;
-    flex-direction:column;
+.card, .card1, .card2, .card3 {
+    width: 750px;
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
-img{
-    height:150px;
-    width:400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(44, 42, 42);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover, .card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card img, .card1 img, .card2 img, .card3 img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card img:hover, .card1 img:hover, .card2 img:hover, .card3 img:hover {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Forms */
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 100px;
-    border: 2px solid #ccc; /* Border added to the form */
-    padding: 20px; /* Padding to give space inside the form */
-    border-radius: 10px; /* Rounded corners for the form */
-    background-color: rgb(40, 39, 39); /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(40, 39, 39);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form h2 {
-    font-size: 24px;
-    margin-bottom: 20px; /* Spacing between heading and form */
-}
-
-form p {
-    text-align: center;
-    font-size: 18px;
-}
-
-form button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    margin-left: 58px;
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    cursor: pointer;
-}
-
-.form_reveal input,
-.form_reveal textarea {
-    margin: 10px;
+.form input, .form textarea {
+    margin: 10px 0;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 250px; /* Adjust the width as needed */
+    width: 100%;
+    max-width: 400px;
+    transition: border 0.3s ease;
 }
 
-.form_reveal textarea {
-    height: 100px;
+.form input:focus, .form textarea:focus {
+    border: 1px solid #ff5722;
+    outline: none;
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker button on hover */
-}
-
-
-.footer{
-    margin-top:200px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-i#heart{
-    color:red;
-    width:15px;
-    height:100px;
-    position:relative;
-    animation:pulse 1.5s infinite alternate;
-    margin:50px auto;
-}
-i::before , i::after{
-
-}
-
-@keyframes pulse{
-    0%{
-        transform:scale(1);
-    }
-    100%{
-        transform:scale(1.2);
-    }
-}
-:root{
-    --bg-color:#ffffff;
-    --text-color:#000000;
-    --button-bg:#007bff;
-    --button-text:#ffffff;
-    
-}
-#theme-toggle {
-    padding: 0.5rem 1rem; /* Increased padding for a larger button */
-    font-size: 16px; /* Slightly larger text */
-    font-weight: bold; /* Make text more prominent */
-    border: none;
-    background-color: var(--button-bg); /* Theme-based button background */
-    color: var(--button-text); /* Theme-based text color */
-    border-radius: 30px; /* Rounded corners for a modern look */
-    transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
-    cursor: pointer; /* Pointer cursor for better interactivity */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Footer */
+.footer {
+    margin-top: 50px;
     text-align: center;
-    outline: none; /* Remove outline on click */
+    padding: 20px;
+    font-size: 14px;
+    color: aliceblue;
+}
+
+i#heart {
+    color: red;
+    font-size: 24px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
 #theme-toggle:hover {
-    background-color: #0056b3; /* Change to a darker shade on hover */
-    transform: scale(1.05); /* Slight scale effect for interactivity */
-}
-
-#theme-toggle:focus {
-    outline: none; /* Remove the default outline when the button is focused */
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow effect when focused */
-}
-
-#theme-toggle .icon {
-    margin-right: 8px; /* Space between the icon and text */
-    font-size: 18px; /* Icon size */
-}
-
-/* Default (light mode) */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --button-bg: #ff5722;
-    --button-text: #ffffff;
+    background-color: #ff5722;
+    transform: scale(1.05);
 }
 
 /* Dark mode */
 body.dark-theme {
-    --bg-color: #000000;
+    --bg-color: #1a1a1a;
     --text-color: #ffffff;
     --button-bg: #ff5722;
     --button-text: #ffffff;
 }
 
-/* Apply variables to elements */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+
+body.dark-theme .container, 
+body.dark-theme .card {
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-.header, .logo-container .title, .navbar a {
-    color: var(--text-color);
+body.dark-theme .navbar a:hover {
+    color: #ff5722;
+    border-bottom: 2px solid #ff5722;
 }
 
-/* Navbar links hover */
-.navbar a:hover {
-    border: 1px solid var(--text-color);
-}
-
-/* Button styling */
-button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-}
-
-/* Default (light mode) styles for container and cards */
-.container {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 20px; /* Add some padding for spacing */
-    border-radius: 10px; /* Rounded edges for a clean look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light mode shadow */
-}
-
-.card1, .card2, .card3 {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-/* Hover effect for cards */
-.card1:hover, .card2:hover, .card3:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-theme .container {
-    background-color: #1a1a1a; 
-    color: var(--text-color);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
-}
-
-body.dark-theme .card1,
-body.dark-theme .card2,
-body.dark-theme .card3 {
-    background-color: #2c2c2c; 
-    color: var(--text-color);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
-}
-
-body.dark-theme .card1:hover,
-body.dark-theme .card2:hover,
-body.dark-theme .card3:hover {
-    transform: scale(1.05);
-    background-color: #3c3c3c; 
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2); 
-}
-
-
-
-@media (max-width:768px) {
-    .navbar{
-        display:none;
-        width:100%;
-    }
-    .navbar.active {
-        margin:50px;
-        padding:5px;
-        display:block;
-        height:180px;
-        width:80px;
-        background-color:black;
-        color:white;
-        display:flex;
+@media (max-width: 768px) {
+    .navbar {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-       
-        
-
-    }
-    .navbar a{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .hamburger{
-        display:block;
-       
-        
-       }
-       .cont{
-        display:flex;
-        flex-direction:row;
-        justify-content:right;
-        align-items: center;
-        gap:20px;
     }
 
-    .card{
-        height:500px;
-        width:400px;
+    .card, .card1, .card2, .card3 {
+        width: 90%;
+        height: auto;
     }
-    .card1,.card2,.card3{
-        height:500px;
-        width:400px;
-        margin:20px;
+
+    .card img {
+        width: 100%;
+        height: auto;
     }
-    img{
-        height:100px;
-        width:200px;
-    }
-    .c2 img{
-        height:100px;
-        width:200px;
-        
-    }
-    
-}
-
-button {
-    padding: 0.75rem 1.5rem; 
-    font-size: 16px; 
-    font-weight: bold; 
-    border: none;
-    background-color: var(--button-bg); 
-    color: var(--button-text); 
-    border-radius: 30px; 
-    transition: background-color 0.3s, transform 0.2s ease-in-out; 
-    cursor: pointer; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    outline: none; 
-}
-
-button:hover {
-    background-color: #0056b3; 
-    transform: scale(1.05);
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); 
-}
-
-button a {
-    color: inherit; 
-    text-decoration: none; 
-    display: block; 
-    width: 100%; 
-    height: 100%; 
-    padding: 0; 
-
-.content-section {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#backToTopBtn {
-    position: absolute; 
-    background-color: rgb(36, 33, 33);
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    display: none; 
-    transition: background-color 0.3s ease;
-}
-
-#backToTopBtn:hover {
-    background-color: hsl(0, 0%, 27%); 
 }
