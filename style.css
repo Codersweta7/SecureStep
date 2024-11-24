@@ -32,13 +32,13 @@ a img:hover {
 
 .first-card {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    text-align: center; /* Center align text */
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
     padding: 20px;
-    margin: 20px auto; /* Center horizontally on the page */
-    max-width: 800px; /* Optional: to constrain the width */
+    margin: 20px auto; 
+    max-width: 800px; 
 }
 
 .first-card h4.multiword, 
@@ -54,14 +54,14 @@ a img:hover {
 }
 
 .first-card img {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; 
+    height: auto; 
     margin-bottom: 20px;
-    border-radius: 10px; /* Optional: for rounded corners */
+    border-radius: 10px;
 }
 
 .first-card .text-and-button {
-    max-width: 600px; /* Constrain text width for better readability */
+    max-width: 600px; 
 }
 
 .first-card .text-and-button .card-text {
@@ -84,7 +84,6 @@ a img:hover {
     transform: scale(1.05);
 }
 
-/* Logo and title styling */
 .logo-container {
     display: flex;
     align-items: center;
@@ -276,6 +275,7 @@ body.dark-theme .navbar a:hover {
 
     .card, .card1, .card2, .card3 {
         width: 90%;
+        display: flex;
         height: auto;
     }
 
